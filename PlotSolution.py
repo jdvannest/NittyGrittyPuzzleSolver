@@ -7,12 +7,15 @@ for i in np.arange(1,25):
     s = pickle.load(open(f'Scripts/Pieces/T{i:02d}.pickle','rb'))
     pieces[i-1] = s
 
+valid_starts = [(1,1),(2,1),(2,2),(2,3),(2,4),(4,1),(4,2),
+                (4,3),(4,4),(5,1),(5,2),(8,1),(13,1),(13,2)]
+
 loop = True
 while loop:
-    input_piece = int(input('Starting Piece [1-24]: '))
-    if input_piece in range(1,25):
-        input_position = int(input('Starting Position [1-4]: '))
-        if input_position in range(1,pieces[input_piece-1].maxpos+1):
+    input_piece = int(input('Starting Tile: '))
+    if input_piece in  [1,2,4,5,8,13]:
+        input_position = int(input('Starting Rotation: '))
+        if (input_piece,input_position) in valid_starts:
             loop = False
     if loop:
         retry = input('Invalid Starting Condition. Try again [y/n]: ')

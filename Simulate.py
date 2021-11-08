@@ -6,7 +6,6 @@ def myprint(string,clear=False):
         sys.stdout.write("\033[F")
         sys.stdout.write("\033[K") 
     print(string)
-plotting = False
 
 pieces = np.empty(24,dtype=object)
 for i in np.arange(1,25):
@@ -14,13 +13,15 @@ for i in np.arange(1,25):
     pieces[i-1] = s
 
 edge_pieces = [[[6,10,13,18],[11,12,15]],[[4,13,14],[2,3,8]],[[14,17,18,20],[21,22,23]]]
+valid_starts = [(1,1),(2,1),(2,2),(2,3),(2,4),(4,1),(4,2),
+                (4,3),(4,4),(5,1),(5,2),(8,1),(13,1),(13,2)]
 
 loop = True
 while loop:
-    input_piece = int(input('Starting Piece [1-24]: '))
-    if input_piece in range(1,25):
-        input_position = int(input('Starting Position [1-4]: '))
-        if input_position in range(1,pieces[input_piece-1].maxpos+1):
+    input_piece = int(input('Starting Tile: '))
+    if input_piece in [1,2,4,5,8,13]:
+        input_position = int(input('Starting Rotation: '))
+        if (input_piece,input_position) in valid_starts:
             loop = False
     if loop:
         retry = input('Invalid Starting Condition. Try again [y/n]: ')
@@ -84,21 +85,3 @@ if not failed:
     pickle.dump(old_chains,out)
     out.close()
 PlotTime(num_options,dt,f'Plots/dt.{starting_piece[0]}.{starting_piece[1]}.png')
-
-if len(old_chains)<1000: plotting = True
-if plotting and not failed:
-    print('Plotting solutions...')
-    LogUpdate('Plotting solutions...\n',starting_piece)
-    t1 = time.time()
-    n = 1
-    for chain in old_chains:
-        board=Board()
-        for step in np.arange(len(chain)):
-            while not pieces[chain[step][0]-1].position == chain[step][1]:
-                pieces[chain[step][0]-1].rotate()
-            board.addpiece(pieces[chain[step][0]-1])
-        board.plot(f'Plots/Board.{chain[0][0]}.{chain[0][1]}.{n}.png')
-        n+=1
-    t2 = time.time()
-    myprint(f'Solutions Plotted in {round((t2-t1)/60,2)} minutes.',clear=True)
-    LogUpdate(f'Solutions Plotted in {round((t2-t1)/60,2)} minutes.\n',starting_piece,clear=True)
