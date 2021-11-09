@@ -17,7 +17,7 @@ The code will prompt you for a starting tile and a starting rotation. Tiles are 
 
 Since each tile pattern has a version for each permutation of the 3 colors, a single solution actually represents 6 solutions, one for each perumtation of (white,orange,magenta):
 
-<img src="ReadmeImages/Board.2.1.1.C1.png" alt="c1" width="75"/> <img src="ReadmeImages/Board.2.1.1.C2.png" alt="c2" width="75"/> <img src="ReadmeImages/Board.2.1.1.C3.png" alt="c3" width="75"/> <img src="ReadmeImages/Board.2.1.1.C4.png" alt="c4" width="75"/> <img src="ReadmeImages/Board.2.1.1.C5.png" alt="c5" width="75"/> <img src="ReadmeImages/Board.2.1.1.C6.png" alt="c6" width="75"/>
+<img src="ReadmeImages/Board.8.1.1.C1.png" alt="c1" width="75"/> <img src="ReadmeImages/Board.8.1.1.C2.png" alt="c2" width="75"/> <img src="ReadmeImages/Board.8.1.1.C3.png" alt="c3" width="75"/> <img src="ReadmeImages/Board.8.1.1.C4.png" alt="c4" width="75"/> <img src="ReadmeImages/Board.8.1.1.C5.png" alt="c5" width="75"/> <img src="ReadmeImages/Board.8.1.1.C6.png" alt="c6" width="75"/>
 
 So in accounting for symmetry and color permutations, there are only 14 starting conditions that need to be simulated in order to find all possible solutions. The (starting piece, starting rotation) options are:
 

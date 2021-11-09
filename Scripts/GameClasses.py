@@ -56,21 +56,23 @@ class Board:
                         ['black','deeppink','orange','white']]
         for colors in combinations:
             f,ax = plt.subplots(1,1,figsize=(5,5))
+            plt.style.use('dark_background')
             ax.tick_params(length=0,labelsize=0)
             ax.set_xlim([0,10])
             ax.set_ylim([0,10])
-            for i in [0,2,4,6,8,10]:
-                ax.axvline(i,c='k',linewidth=2)
-                ax.plot([0,10],[i,i],c='k',linewidth=2)
             for i in np.arange(len(self.placed)):
                 row,col = [i//5,i%5]
                 x = 2*col
                 y = 10-2*row
                 points = self.pieces[row][col].colors
-                ax.scatter(x+.5,y-.5,c=colors[int(points[0][0])],marker='s',s=27**2)
-                ax.scatter(x+1.5,y-.5,c=colors[int(points[0][1])],marker='s',s=27**2)
-                ax.scatter(x+.5,y-1.5,c=colors[int(points[1][0])],marker='s',s=27**2)
-                ax.scatter(x+1.5,y-1.5,c=colors[int(points[1][1])],marker='s',s=27**2)
+                s=26.7**2
+                ax.scatter(x+.5,y-.5,c=colors[int(points[0][0])],marker='s',s=s)
+                ax.scatter(x+1.5,y-.5,c=colors[int(points[0][1])],marker='s',s=s)
+                ax.scatter(x+.5,y-1.5,c=colors[int(points[1][0])],marker='s',s=s)
+                ax.scatter(x+1.5,y-1.5,c=colors[int(points[1][1])],marker='s',s=s)
+            for i in [0,2,4,6,8,10]:
+                ax.axvline(i,c='k',linewidth=2)
+                ax.plot([0,10],[i,i],c='k',linewidth=2)
             fname = filename.rstrip('.png')
             fname = fname+f'.C{combinations.index(colors)+1}.png'
             f.savefig(fname,bbox_inches='tight',pad_inches=.1)
