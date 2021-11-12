@@ -1,0 +1,25 @@
+T1: 1 chains analyzed in 0.0 minutes
+T2: 8 chains analyzed in 0.0 minutes
+T3: 61 chains analyzed in 0.0 minutes
+T4: 449 chains analyzed in 0.01 minutes
+T5: 3137 chains analyzed in 0.03 minutes
+T6: 20168 chains analyzed in 0.08 minutes
+T7: 38301 chains analyzed in 0.14 minutes
+T8: 67974 chains analyzed in 0.24 minutes
+T9: 117519 chains analyzed in 0.38 minutes
+T10: 195945 chains analyzed in 1.47 minutes
+T11: 854576 chains analyzed in 2.51 minutes
+T12: 1143582 chains analyzed in 7.66 minutes
+T13: 4105150 chains analyzed in 11.7 minutes
+T14: 4709198 chains analyzed in 25.9 minutes
+T15: 13333419 chains analyzed in 37.63 minutes
+T16: 12563449 chains analyzed in 55.65 minutes
+T17: 24174950 chains analyzed in 36.71 minutes
+T18: 5165445 chains analyzed in 8.95 minutes
+T19: 3042820 chains analyzed in 7.0 minutes
+T20: 3202433 chains analyzed in 5.09 minutes
+T21: 963836 chains analyzed in 1.23 minutes
+T22: 210267 chains analyzed in 0.24 minutes
+T23: 26297 chains analyzed in 0.03 minutes
+Total computation time: 3.41 hrs
+2639 solutions found starting with (5, 2)

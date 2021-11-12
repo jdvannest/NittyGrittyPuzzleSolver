@@ -1,0 +1,25 @@
+T1: 1 chains analyzed in 0.0 minutes
+T2: 8 chains analyzed in 0.0 minutes
+T3: 66 chains analyzed in 0.0 minutes
+T4: 512 chains analyzed in 0.01 minutes
+T5: 3710 chains analyzed in 0.03 minutes
+T6: 20496 chains analyzed in 0.06 minutes
+T7: 44539 chains analyzed in 0.12 minutes
+T8: 88094 chains analyzed in 0.23 minutes
+T9: 160695 chains analyzed in 0.42 minutes
+T10: 284126 chains analyzed in 2.08 minutes
+T11: 1416613 chains analyzed in 3.38 minutes
+T12: 2102176 chains analyzed in 12.89 minutes
+T13: 8049927 chains analyzed in 18.23 minutes
+T14: 10244400 chains analyzed in 52.03 minutes
+T15: 31410067 chains analyzed in 67.23 minutes
+T16: 32077573 chains analyzed in 120.58 minutes
+T17: 68631657 chains analyzed in 75.72 minutes
+T18: 15660889 chains analyzed in 20.49 minutes
+T19: 10269490 chains analyzed in 21.92 minutes
+T20: 11844246 chains analyzed in 14.34 minutes
+T21: 4052432 chains analyzed in 4.04 minutes
+T22: 1003916 chains analyzed in 0.96 minutes
+T23: 145715 chains analyzed in 0.13 minutes
+Total computation time: 7.0 hrs
+14078 solutions found starting with (8, 1)
